@@ -6,9 +6,8 @@
     Final Project Sketch
     Head Shell file
 */
-
 // Render Rules //
-$fn = $preview ? 50 : 100;
+$fn = $preview ? 50 : 200;
 
 // Visualization //
 translate([0, 0, 20])
@@ -30,14 +29,12 @@ module skeleton(
         
         module side(z_rotation) {
             rotate([0, 90, z_rotation])
+            linear_extrude(1)
             circle(d = head_diameter + 2);
         }
         rotation = 360 / sides;
         
-        for (i = [0:sides - 1]) {
-            
-            echo(i * rotation);
-            
+        for (i = [0:sides - 1]){            
             side(i * rotation);
             
             hull(){

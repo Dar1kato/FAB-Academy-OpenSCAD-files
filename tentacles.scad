@@ -11,7 +11,7 @@
 $fn = $preview ? 50 : 100;
 
 // Visualization //
-tentacle(joint_number = 3);
+tentacle(joint_number = 1);
 
 // Module(s) //
 module tentacle(
